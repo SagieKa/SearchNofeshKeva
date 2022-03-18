@@ -51,45 +51,50 @@ def sendMAil(arr):
         )
 
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
-driver.get(url2)
+def runAllMin():
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.get(url2)
 
-IdNumber = driver.find_elements_by_id("IdNumber")
-IdNumber[0].send_keys(taodat_zehot)
+    IdNumber = driver.find_elements_by_id("IdNumber")
+    IdNumber[0].send_keys(taodat_zehot)
 
-password = driver.find_elements_by_id("Password")
-password[0].send_keys(user_password)
-driver.find_element_by_xpath('//*[@id="submitLogin"]').click()
+    password = driver.find_elements_by_id("Password")
+    password[0].send_keys(user_password)
+    driver.find_element_by_xpath('//*[@id="submitLogin"]').click()
 
-"""a 1 place:"""
-# from_date=driver.find_elements_by_id("fromDateInput")   
-# from_date[0].send_keys(from_date_data)
-"""a 2 place:"""
-# to_date=driver.find_elements_by_id("toDateInput")
-# to_date[0].send_keys(to_data_data)
-"""a 3 place:"""
-# area=driver.find_elements_by_id("areaHoteltxt")
-# area[0].send_keys(city)
-"""a 4 place:"""
-# type=driver.find_elements_by_id("hotelTypeSelected")
-# type[0].send_keys(typeHotel)
+    """a 1 place:"""
+    # from_date=driver.find_elements_by_id("fromDateInput")   
+    # from_date[0].send_keys(from_date_data)
+    """a 2 place:"""
+    # to_date=driver.find_elements_by_id("toDateInput")
+    # to_date[0].send_keys(to_data_data)
+    """a 3 place:"""
+    # area=driver.find_elements_by_id("areaHoteltxt")
+    # area[0].send_keys(city)
+    """a 4 place:"""
+    # type=driver.find_elements_by_id("hotelTypeSelected")
+    # type[0].send_keys(typeHotel)
 
-time.sleep(2)
+    time.sleep(2)
 
-driver.find_element_by_xpath('//*[@id="searchButton"]').click()
+    driver.find_element_by_xpath('//*[@id="searchButton"]').click()
 
-time.sleep(30)
-value = driver.find_elements_by_xpath('//h3[contains(@class, "name")]')
-arr=[]
-for i in value:
-    print(i.text)
-    arr.append(i.text)
+    time.sleep(30)
+    value = driver.find_elements_by_xpath('//h3[contains(@class, "name")]')
+    arr=[]
+    for i in value:
+        # print(i.text)
+        arr.append(i.text)
 
-if len(arr)==0:
-    print('not send')
-else:
-    sendMAil(arr)
-    print('send')
+    if len(arr)==0:
+        print('not send')
+    else:
+        sendMAil(arr)
+        print('send')
 
-time.sleep(3)
-driver.close()
+    time.sleep(3)
+    driver.close()
+
+while True:
+    runAllMin()
+    time.sleep(60)
