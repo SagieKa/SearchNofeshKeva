@@ -1,6 +1,11 @@
 # SearchNofeshKeva
 #-----------------------------------------------------------------------------------#
 
+
+# install python 3.X 
+# install with pip: selenium, MIMEMultipart,MIMEText.
+
+
 # you need to look of remarks:
 
 put here your id : #taodat_zehot = "*********"
