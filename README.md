@@ -15,10 +15,10 @@ to_data_data='29/05/22'
 city='דן אילת 2022'
 6.if you put date you must need to delete remarks type in #4 place
 typeHotel='מבוקש'
-7. sender_email = "********"put here the mail you want that send your results -> you need to open a new one mail in google and open the security for small low security software.  
-8. password = "********" #put here the password of new one mail.
-9. receiver_email = "sagieka@gmail.com" #put here the mail that you want to recive the mails.
-10. """a 1 place:"""
+7. sender_email = "********"put here the mail you want that send your results -> you need to open a new one mail in google and open the security for small low security software.
+8.password = "********" #put here the password of new one mail.
+9.receiver_email = "sagieka@gmail.com" #put here the mail that you want to recive the mails.
+10."""a 1 place:"""
 #from_date=driver.find_elements_by_id("fromDateInput")   
 #from_date[0].send_keys(from_date_data)
 11."""a 2 place:"""
