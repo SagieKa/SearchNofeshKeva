@@ -78,7 +78,7 @@ time.sleep(2)
 
 driver.find_element_by_xpath('//*[@id="searchButton"]').click()
 
-time.sleep(3)
+time.sleep(30)
 value = driver.find_elements_by_xpath('//h3[contains(@class, "name")]')
 arr=[]
 for i in value:
