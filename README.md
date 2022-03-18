@@ -42,4 +42,7 @@ receiver_email = "sagieka@gmail.com" #put here the mail that you want to recive 
 #type=driver.find_elements_by_id("hotelTypeSelected")
 #type[0].send_keys(typeHotel)
 
+'רןאק
+write in terminal : python find-order.py
+
 and run it! good luck!
